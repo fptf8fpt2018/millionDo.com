@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="refresh" content="120" content="text/html; charset=utf-8" />
+<title>ĐĂNG KÝ - Tủ sách online</title>
+<meta name="author" content="Trieu Do Duc "  />
+<link href="images/favicon.png" rel="shortcut icon" type="text/css" />
+<link href="dangKy_css.css" rel="stylesheet" type="text/css"/>
+
+
+<!-- floating menu -->
+			<script src="js/jquery.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                var $filter = $('#menu');
+                var $filterSpacer = $('<div />', {
+                    "class": "vnkings-spacer",
+                    "height": $filter.outerHeight()
+                });
+                if ($filter.size())
+                {
+                    $(window).scroll(function ()
+                    {
+                        if (!$filter.hasClass('fix') && $(window).scrollTop() > $filter.offset().top)
+                        {
+                            $filter.before($filterSpacer);
+                            $filter.addClass("fix");
+                        }
+                        else if ($filter.hasClass('fix')  && $(window).scrollTop() < $filterSpacer.offset().top)
+                        {
+                            $filter.removeClass("fix");
+                            $filterSpacer.remove();
+                        }
+                    });
+                }
+        
+            });
+            </script>
+
+<!-- go top -->  
+			<script>
+        // lon hon 20 hien bt go back top
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+        
+        // click vao nut len top thi se len top
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+        
+<!-- dang nhap -->
+		<script>
+          function xlDangNhap(ten,mk){
+                  if( (ten=='') || (mk=="") ){
+                      return alert('Vui lòng điền đủ tài khoản và mật khẩu');
+                      }
+                  
+                  else if(ten=="doductrieu"){
+                      if(mk=="trieudz"){
+                      alert('Đăng nhập thành công');
+                      window.open('https://facebook.com/do.ductrieu','Your Account');
+                      }
+                      else{
+                         return alert('Mật khẩu không đúng');
+                      }
+                  }
+                  else{
+                      var e= confirm('Tài khoản không tồn tại !!! Bạn muốn tạo 1 tài khoản ?');
+					  if(e==1)
+					  window.open('dangKy.html','Đăng ký ');
+                  }
+           }
+           
+           function chuyenDenDangKy(){
+               window.open("dangKy.html","_blank");
+           }
+        </script> 
+        
+ 
+<!--tim kiem --> 
+         <script>
+			 function timKiem2(gTri, after){
+			var server ="duc trieu,sách,đức triệu"; 
+			var client = gTri.trim().toLowerCase();   //xoa cach dau va cuoi , chuyen thanh chu thuong
+			if (after.keyCode==13){                         // key code == 13 la dau enter
+				if (server.indexOf(client)>=0){
+					alert('Tìm thấy'); 
+					}
+					else{
+						alert('Không tìm thấy');
+						}
+			}
+			}
+			
+			 function timKiem1(gTri){
+			var server ="duc trieu,sách,đức triệu"; 
+			var client = gTri.trim().toLowerCase(); 
+			
+				if (server.indexOf(client)>=0){
+					alert('Tìm thấy'); 
+					}
+					else{
+						alert('Không tìm thấy');
+						}
+			
+			}
+			</script>
+            
+            
+<!-- dang ky -->
+				<script>
+                  function xlDangKy(){
+                      var output ="" ;   // khai bao sau trong
+                      var user = document.getElementById("userName");
+                      var password = document.getElementById("password");
+                      var name = document.getElementById("name");
+                      var gender = document.getElementById("gender");
+                      var DOB = document.getElementById("DOB");
+                      var job = document.getElementById("job");
+                      var email = document.getElementById("email");
+                      var phone = document.getElementById("phone");
+                      var message = document.getElementById("message");
+                      
+                      output = "<br><br><b><strong><mark>Xác nhận thông tin</mark><strong></b><br><br>";
+                      output += "<b><code>Tên tài khoản :  </code></b>" + user.value + "<br>";
+                      output += "<b><code>Mật khẩu      :  </code></b>" + password.value + "<br>";
+                      output += "<b><code>Họ tên        :  </code></b>" + name.value + "<br>";
+                      output += "<b><code>Giới tính     :  </code></b>" + gender.value + "<br>";
+                      output += "<b><code>Ngày sinh     :  </code></b>" + DOB.value + "<br>";
+                      output += "<b><code>Công việc     :  </code></b>" + job.value + "<br>";
+                      output += "<b><code>E-mail        :  </code></b>" + email.value + "<br>";
+                      output += "<b><code>Điện thoại    :  </code></b>" + phone.value + "<br>";
+                      output += "<b><code>Lời nhắn thêm :  </code></b>" + message.value + "<br>";
+                     
+                       if(name.value != "" && password.value!= "" && name.value!= "" && email.value!= "" && phone.value!= "") { document.getElementById("output").innerHTML=output; }
+                }
+                
+                </script>
+
+
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	
+<header id="header"> 
+                   
+<div id="logo1">
+<img src="images/logo1.png"  title="theGioiSach" height="160px" width="130px" />
+</div>
+
+<div id="title">
+<span class="general"><font size="+4"> <big>TỦ SÁCH <span class="type1">ĐỨC TRIỆU</span> </big></font><br />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#9668; THẾ GIỚI SÁCH CỦA MỌI NHÀ &#9658;</span>
+</div>
+
+<div id="info">
+
+<div id="contact">
+<a href="https://www.youtube.com/channel/UCETPWPYWXgYIuoHBWvZuwkQ?view_as=subscriber" target="blank" title="watch more on youtube"><img src="images/youTube.png" width="32" height="32" /></a>
+<a href="https://www.facebook.com/do.ductrieu" target="_blank" title="follow facebook" ><img src="images/facebook.png" height="32" width="32" alt="error" /></a>
+<a href="mailto:fptf8fpt@gmail.com" target="_blank" title="send mail" > <img  src="images/gmail-logo-icon.png" height="32" width="32" alt="error" /></a>
+</div>
+<div id="account">
+<form target="_blank" method="post" >
+<table>
+ <tr>
+  <td>
+    <label for="user" id="labelAccount" ><code>Tài khoản</code></label>
+  <td>  
+    <input type="text" class="txtAccount" id="user" name="user" placeholder="Nhập tài khoản" size="10" > 
+  </td>
+ 
+ <tr>
+  <td>
+    <label for="pass" id="labelAccount"><code>Mật khẩu</code></label>
+  <td>
+    <input type="password" class="txtAccount" id="pass" name="pass" placeholder="Nhập mật khẩu" size="10">
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <input type="submit" id="buttonAccount" name="buttonAccount" tabindex="12" value="Đăng nhập" onclick="xlDangNhap(user.value,pass.value)">
+  </td>
+  <td>
+   <input type="button" id="buttonAccount" name="buttonAccount"  value="Đăng ký" style="margin-left:8px" onClick="chuyenDenDangKy()">
+  </td>
+ </tr>
+</table>
+</form>
+</div>
+
+</div>
+
+<div id="deleteFloat1">&nbsp;</div>               
+                    
+                    
+<div id="menu"> 
+<nav id="menu1">
+<ul>
+<li><a href="trangChu.html">Trang chủ&emsp;&Delta;</a></li> 
+<li><a href="#">Thẻ loại&emsp;&darr;</a>
+  <ol id="subMenu1" >
+    <li><a href="#">Sách bán chạy</a></li>
+    <li><a href="#">Sách mới</a></li>
+    <li><a href="#">Self-help</a></li>
+    <li><a href="#">Truyện tranh</a></li>
+    <li><a href="#">Ngôn tình</a></li>
+    <li><a href="#">Trinh thám</a></li>
+   </ol>
+</li>
+<li><a href="#">Tin tức&emsp;&curren;</a>
+   <ol id="subMenu1" >
+     <li><a href="#">Về sách</a></li>
+     <li><a href="#">Trong nước</a></li>
+     <li><a href="#">Thế giới</a></li>
+   </ol>
+</li>
+<li><a href="#">Mẹo hay&emsp;&crarr;</a>
+  <ol id="subMenu1" >
+     <li><a href="#">Tìm mua sách</a></li>
+     <li><a href="#">Cách đọc sách</a></li>
+     <li><a href="#">Bảo quản sách</a></li>
+     <li><a href="#">Khác...</a></li>
+   </ol>
+</li>
+<li><a href="#">Góc review&emsp;&zeta;</a></li>
+<li><a href="#">Diễn đàn&emsp;&there4;</a></li>
+</ul>
+</nav>
+<div id="menu2">
+
+<div id="input1">
+<input type="image" id="imgInput1" title="Tìm sản phẩm" src="images/find.png" style="height:30px; width:40px;" 
+onclick="timKiem1(txtInput2.value);" />
+</div>
+<div id="input2">
+<input type="text" title="Tìm sản phẩm" placeholder="Nhập tên sản phẩm..." size="16" id="txtInput2" 
+onKeyPress="timKiem2(this.value,window.event);"/> 
+</div>
+
+
+<div id="deleteFloat2">&nbsp;</div>
+</div>
+</header>
+<div id="deleteFloat3">&nbsp;</div>
+
+
+
+<!-- start content Page --> 
+<section id="mainContainer">
+
+<!-- start sidebar1 --> 
+<aside id="sideBarL">
+<!--sideBar1_1-->
+<div id="sideBar1">
+ <iframe src="iframe1.html" height="310px" width="260px" scrolling="no" style="border: none ;"> </iframe>
+</div> 
+<!-- close sideBar1_1--> 
+
+<!--sideBar1_2-->
+<div id="sideBar2">
+  <iframe src="iframe2.html" height="330px" width="260px" scrolling="no" style="border: none"> </iframe>
+</div><!--clode sideBar1_2> -->
+
+<!--sideBar1_3--> 
+<div id="sideBar3"> 
+  <iframe src="iframe3.html" height="125px"  width="260px" scrolling="no" style="border:none;"></iframe>   
+</div>
+<!-- end sibar1_3-->
+
+</aside>
+<!-- end sibar1-->
+
+<section id="mainContent">
+   <form id="contactform" name="contact" method="post" action="#">
+  <p class="note"><code><big><b>Đăng ký thành viên mới</b></big> <br>(<span class="req">*</span>) <i><small>bắt buộc</small></i></code></p>
+  
+  <div class="row">
+    <label for="user">Tên tài khoản<span class="req">*</span></label>
+    <input type="text" name="userName" id="userName" class="txt" tabindex="1" placeholder="Nhập tên tài khoản vào đây" required>
+  </div>
+  
+  <div class="row">
+    <label for="password">Mật khẩu<span class="req">*</span></label>
+    <input type="password" name="password" id="password" class="txt" tabindex="2" placeholder="Nhập mật khẩu vào đây" required>
+  </div>
+  
+    <div class="row">
+    <label for="password">Nhập lại<span class="req">*</span></label>
+    <input type="password" name="password" id="password" class="txt" tabindex="3" placeholder="Nhập lại mật khẩu vào đây" required>
+  </div>
+  
+  <div class="row">
+    <label for="name">Họ tên<span class="req">*</span></label>
+    <input type="text" name="name" id="name" class="txt" tabindex="4" placeholder="VD : Đỗ Đức Triệu" required 
+    pattern="[a-zA-Z]{1,15}" title="Tên không được có ký tự đặc biệt và số">
+  </div>    <!-- tabindex chuyen theo thu tu  .   pattern : chuan nhap-->  
+  
+  <div class="row">
+    <label for="gender">Giới tính</label>
+    <input type="radio" name="gender" id="gender" tabindex="6" value="Nam" autofocus>Nam
+    <input type="radio" name="gender" id="gender" tabindex="6" value="Nữ" autofocus>Nữ
+    <input type="radio" name="gender" id="gender" tabindex="6" value="Khác" checked>Khác
+  </div> 
+  
+  <div class="row">
+    <label for="DOB">Ngày sinh</label>
+    <input type="date" name="DOB" id="DOB"  tabindex="7" class="txt" >
+  </div>
+  
+   <div class="row">
+    <label for="job">Công việc</label>
+    <select size="1" id="job" name="job" class="txt" tabindex="8">
+           <option value="-1" selected="selected" disabled="disabled">Công việc</option>
+          <option value="teacher">Giáo viên</option>
+          <option value="student">Học sinh</option>
+          <option value="employee">Công nhân</option>
+          <option value="arter">Nghệ sĩ</option>
+          <option value="staff">Nhân viên</option>
+          <option value="other">Khác</option>
+
+   </select>
+
+  </div>
+  
+  <div class="row">
+    <label for="email">E-mail <span class="req">*</span></label>
+    <input type="email" name="email" id="email" class="txt" tabindex="9" placeholder="abc...@domain.com" required>
+  </div>
+ 
+  <div class="row">
+    <label for="phone">Điện thoại <span class="req">*</span></label>
+    <input type="number" name="phone" id="phone" class="txt" min="100000000" max="9999999999" tabindex="10" placeholder="0xxxxxxxxxx" required pattern="[0-9]{10}">
+  </div>
+ 
+  <div class="row">
+    <label for="message">Ghi chú </label>
+    <textarea name="message" id="message" class="txtarea" tabindex="11"></textarea>
+  </div>
+ 
+  <div class="center">
+    <input type="submit" id="submitbtn" name="submitbtn" tabindex="12" value="Đăng ký" onClick="xlDangKy()">
+  </div>
+</form>
+<div id="output"></div>
+</section>
+
+<div id="sideBar2"></div>
+
+<aside id="sideBarR">
+
+<div id="sideBar4">
+  <iframe src="iframe4.html" height="168px" width="260px" scrolling="no" style="border: none"> </iframe>	
+</div>
+<div id="sideBar5">
+   <iframe src="iframe5.html" height="750px" width="260px" scrolling="no" style="border: none"> </iframe>
+</div>
+
+</aside>
+
+ 
+ <div style="clear: both;"></div>
+ </section><!-- end mainContainer Page -->
+
+
+
+<!-- start Footer--> 
+<footer id="footer">
+<div id="footer1"> 
+<font size="+2"><code>&copy; 2009 &bull; All Rights Reserved <br /><a href="https://www.facebook.com/do.ductrieu" target="_blank" title="Alphatek Company" style="text-decoration:none;"> Design by Alphatek Company</a> </code></font>
+</div>
+
+</footer>
+<!-- end Footer-->         
+        
+</body>
+</html>

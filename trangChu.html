@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="refresh" content="120" content="text/html; charset=utf-8" />
+<title>TRANG CHỦ - Tủ sách online</title>
+<meta name="author" content="Trieu Do Duc "  />
+<link href="images/favicon.png" rel="shortcut icon" type="text/css" />
+<link href="trangChu_css.css" rel="stylesheet" type="text/css"/>
+
+<!-- lightBox -->
+<link rel="stylesheet" type="text/css" href="lightbox.min.css">
+<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
+<!-- floating menu -->
+			<script src="js/jquery.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                var $filter = $('#menu');
+                var $filterSpacer = $('<div />', {
+                    "class": "vnkings-spacer",
+                    "height": $filter.outerHeight()
+                });
+                if ($filter.size())
+                {
+                    $(window).scroll(function ()
+                    {
+                        if (!$filter.hasClass('fix') && $(window).scrollTop() > $filter.offset().top)
+                        {
+                            $filter.before($filterSpacer);
+                            $filter.addClass("fix");
+                        }
+                        else if ($filter.hasClass('fix')  && $(window).scrollTop() < $filterSpacer.offset().top)
+                        {
+                            $filter.removeClass("fix");
+                            $filterSpacer.remove();
+                        }
+                    });
+                }
+        
+            });
+            </script>
+
+<!-- go top -->  
+			<script>
+        // lon hon 20 hien bt go back top
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+        
+        // click vao nut len top thi se len top
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+        
+<!-- dang nhap -->
+		<script>
+          function xlDangNhap(ten,mk){
+                  if( (ten=='') || (mk=="") ){
+                      return alert('Vui lòng điền đủ tài khoản và mật khẩu');
+                      }
+                  
+                  else if(ten=="doductrieu"){
+                      if(mk=="trieudz"){
+                      alert('Đăng nhập thành công');
+                      window.open('https://facebook.com/do.ductrieu','Your Account');
+                      }
+                      else{
+                         return alert('Mật khẩu không đúng');
+                      }
+                  }
+                  else{
+                     var e= confirm('Tài khoản không tồn tại !!! Bạn muốn tạo 1 tài khoản ?');
+					  if(e==1)
+					  window.open('dangKy.html','Đăng ký ');
+                  }
+           }
+           
+           function chuyenDenDangKy(){
+               window.open("dangKy.html","_blank");
+           }
+        </script> 
+        
+ 
+<!--tim kiem --> 
+         <script>
+			 function timKiem2(gTri, after){
+			var server ="duc trieu,sách,đức triệu"; 
+			var client = gTri.trim().toLowerCase();   //xoa cach dau va cuoi , chuyen thanh chu thuong
+			if (after.keyCode==13){                         // key code == 13 la dau enter
+				if (server.indexOf(client)>=0){
+					alert('Tìm thấy'); 
+					}
+					else{
+						alert('Không tìm thấy');
+						}
+			}
+			}
+			
+			 function timKiem1(gTri){
+			var server ="duc trieu,sách,đức triệu"; 
+			var client = gTri.trim().toLowerCase(); 
+			
+				if (server.indexOf(client)>=0){
+					alert('Tìm thấy'); 
+					}
+					else{
+						alert('Không tìm thấy');
+						}
+			
+			}
+			</script>
+            
+            
+<!-- dang ky -->
+				<script>
+                  function xlDangKy(){
+                      var output ="" ;   // khai bao sau trong
+                      var user = document.getElementById("userName");
+                      var password = document.getElementById("password");
+                      var name = document.getElementById("name");
+                      var gender = document.getElementById("gender");
+                      var DOB = document.getElementById("DOB");
+                      var job = document.getElementById("job");
+                      var email = document.getElementById("email");
+                      var phone = document.getElementById("phone");
+                      var message = document.getElementById("message");
+                      
+                      output = "<b><strong><mark>Xác nhận thông tin</mark><strong></b><br><br>";
+                      output += "<b><code>Tên tài khoản :  </code></b>" + user.value + "<br>";
+                      output += "<b><code>Mật khẩu      :  </code></b>" + password.value + "<br>";
+                      output += "<b><code>Họ tên        :  </code></b>" + name.value + "<br>";
+                      output += "<b><code>Giới tính     :  </code></b>" + gender.value + "<br>";
+                      output += "<b><code>Ngày sinh     :  </code></b>" + DOB.value + "<br>";
+                      output += "<b><code>Công việc     :  </code></b>" + job.value + "<br>";
+                      output += "<b><code>E-mail        :  </code></b>" + email.value + "<br>";
+                      output += "<b><code>Điện thoại    :  </code></b>" + phone.value + "<br>";
+                      output += "<b><code>Lời nhắn thêm :  </code></b>" + message.value + "<br>";
+                
+				     document.write(output);
+
+					 
+				  }
+	
+                
+                </script>
+
+
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	
+<header id="header"> 
+                   
+<div id="logo1">
+<img src="images/logo1.png"  title="theGioiSach" height="160px" width="130px" />
+</div>
+
+<div id="title">
+<span class="general"><font size="+4"> <big>TỦ SÁCH <span class="type1">ĐỨC TRIỆU</span> </big></font><br />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&#9668; THẾ GIỚI SÁCH CỦA MỌI NHÀ &#9658;</span>
+</div>
+
+<div id="info">
+
+<div id="contact">
+<a href="https://www.youtube.com/channel/UCETPWPYWXgYIuoHBWvZuwkQ?view_as=subscriber" target="blank" title="watch more on youtube"><img src="images/youTube.png" width="32" height="32" /></a>
+<a href="https://www.facebook.com/do.ductrieu" target="_blank" title="follow facebook" ><img src="images/facebook.png" height="32" width="32" alt="error" /></a>
+<a href="mailto:fptf8fpt@gmail.com" target="_blank" title="send mail" > <img  src="images/gmail-logo-icon.png" height="32" width="32" alt="error" /></a>
+</div>
+<div id="account">
+<form target="_blank" method="post" >
+<table>
+ <tr>
+  <td>
+    <label for="user" id="labelAccount" ><code>Tài khoản</code></label>
+  <td>  
+    <input type="text" class="txtAccount" id="user" name="user" placeholder="Nhập tài khoản" size="10" > 
+  </td>
+ 
+ <tr>
+  <td>
+    <label for="pass" id="labelAccount"><code>Mật khẩu</code></label>
+  <td>
+    <input type="password" class="txtAccount" id="pass" name="pass" placeholder="Nhập mật khẩu" size="10">
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <input type="submit" id="buttonAccount" name="buttonAccount" tabindex="12" value="Đăng nhập" onclick="xlDangNhap(user.value,pass.value)">
+  </td>
+  <td>
+   <input type="button" id="buttonAccount" name="buttonAccount"  value="Đăng ký" style="margin-left:8px" onClick="chuyenDenDangKy()">
+  </td>
+ </tr>
+</table>
+</form>
+</div>
+
+</div>
+
+<div id="deleteFloat1">&nbsp;</div>               
+                    
+                    
+<div id="menu"> 
+<nav id="menu1">
+<ul>
+<li><a href="trangChu.html">Trang chủ&emsp;&Delta;</a></li> 
+<li><a href="#">Thẻ loại&emsp;&darr;</a>
+  <ol id="subMenu1" >
+    <li><a href="#">Sách bán chạy</a></li>
+    <li><a href="#">Sách mới</a></li>
+    <li><a href="#">Self-help</a></li>
+    <li><a href="#">Truyện tranh</a></li>
+    <li><a href="#">Ngôn tình</a></li>
+    <li><a href="#">Trinh thám</a></li>
+   </ol>
+</li>
+<li><a href="#">Tin tức&emsp;&curren;</a>
+   <ol id="subMenu1" >
+     <li><a href="#">Về sách</a></li>
+     <li><a href="#">Trong nước</a></li>
+     <li><a href="#">Thế giới</a></li>
+   </ol>
+</li>
+<li><a href="#">Mẹo hay&emsp;&crarr;</a>
+  <ol id="subMenu1" >
+     <li><a href="#">Tìm mua sách</a></li>
+     <li><a href="#">Cách đọc sách</a></li>
+     <li><a href="#">Bảo quản sách</a></li>
+     <li><a href="#">Khác...</a></li>
+   </ol>
+</li>
+<li><a href="#">Góc review&emsp;&zeta;</a></li>
+<li><a href="#">Diễn đàn&emsp;&there4;</a></li>
+</ul>
+</nav>
+<div id="menu2">
+
+<div id="input1">
+<input type="image" id="imgInput1" title="Tìm sản phẩm" src="images/find.png" style="height:30px; width:40px;" 
+onclick="timKiem1(txtInput2.value);" />
+</div>
+<div id="input2">
+<input type="text" title="Tìm sản phẩm" placeholder="Nhập tên sản phẩm..." size="16" id="txtInput2" 
+onKeyPress="timKiem2(this.value,window.event);"/> 
+</div>
+
+
+<div id="deleteFloat2">&nbsp;</div>
+</div>
+</header>
+<div id="deleteFloat3">&nbsp;</div>
+
+
+
+<!-- start content Page --> 
+<section id="mainContainer">
+
+<!-- start sidebar1 --> 
+<aside id="sideBarL">
+<!--sideBar1_1-->
+<div id="sideBar1">
+ <iframe src="iframe1.html" height="310px" width="260px" scrolling="no" style="border: none ;"> </iframe>
+</div> 
+<!-- close sideBar1_1--> 
+
+<!--sideBar1_2-->
+<div id="sideBar2">
+  <iframe src="iframe2.html" height="330px" width="260px" scrolling="no" style="border: none"> </iframe>
+</div><!--clode sideBar1_2> -->
+
+<!--sideBar1_3--> 
+<div id="sideBar3"> 
+  <iframe src="iframe3.html" height="125px"  width="260px" scrolling="no" style="border:none;"></iframe>   
+</div>
+<!-- end sibar1_3-->
+
+</aside>
+<!-- end sibar1-->
+
+<section id="mainContent">   
+  <!-- mainContent1-->
+<div id="mainContent1">
+<div id="mainContent1_1">
+<img src="images/bg_banner.jpg"  height="380" width="850" />
+</div>
+<div id="mainContent1_2">
+  <a href="gioiThieu.html" target="_blank"><p style="font-weight: 800; text-align: center;font-size:14pt;">&laquo;&laquo;&nbsp;&nbsp;Cửa hàng của chúng tôi&nbsp;&nbsp;&raquo;&raquo; </p></a>
+</div>
+</div> 
+<!-- end mainContent1-->
+ 
+<!--mainContent2 --> 
+<div id="mainContent2">
+<div id="mainContent2_1">&nbsp;&loz;&emsp;Gợi ý</div> 
+<div id="mainContent2_2"> Danh sách hình các <big><code>&laquo;Sách cực hot&raquo;</code></big> <br />
+
+ <a data-lightbox="gallery" href="images/b1.jpg"><img src="images/b1.jpg" width="140" height="200" id="img" /></a>&nbsp;&nbsp;
+ <a data-lightbox="gallery" href="images/b2.jpg"><img src="images/b2.jpg" width="140" height="200" id="img" /></a>&nbsp;&nbsp;
+ <a data-lightbox="gallery" href="images/b3.jpg"><img src="images/b3.jpg" width="140" height="200" id="img" /></a>&nbsp;&nbsp;
+ <a data-lightbox="gallery" href="images/b4.jpg"><img src="images/b4.jpg" width="140" height="200" id="img" /></a>&nbsp;&nbsp;
+ <a data-lightbox="gallery" href="images/b5.jpg"><img src="images/b5.jpg" width="140" height="200" id="img" /></a>
+
+</div>
+
+
+</div><!--end mainContent2--> 
+ 
+<!--mainContent3 -->
+<div id="mainContent3"> <h1 style="font-size:45px; font-weight:520 ; color:red;">Chào mừng bạn đến với tủ sách bổ ích!</h1>
+<h3>
+ <small><font size="+2"> Vừa thỏa sức shopping , vừa trau dồi kiến thức , tại sao không ? </font></small></h3> <br /><p style="line-height:2em;"> <mark>Sách</mark> là <mark>kho tàng tri thức</mark> của con người, <mark>cung cấp</mark> cho chúng ta không chỉ <mark>kiến thức</mark>, mà còn các <mark>bài học</mark> cuộc sống, <mark>kinh nghiệm sống</mark>, đồng thời cũng là phương tiện <mark>giải trí</mark> khá hiệu quả. Vậy nên đọc sách luôn là việc mà ai cũng khuyến khích thực hiện. Bạn hãy thử thay đổi thói quen bằng việc <mark>đọc sách ngay hôm nay và cảm nhận nhé!</mark><br /> Shop <strong><code><font size="+2">ĐỨC TRIỆU</font></code></strong> muốn giới thiệu với các bạn. </p></div> 
+<!--end mainContent3-->
+ 
+ <!--mainContent4-->
+ <div id="mainContent4">
+ <div id="mainContent4_1">&nbsp;&loz;&emsp;Giảm giá</div>
+ <div id="mainContent4_2" style="text-align:center; font-weight:900"> Danh sách hình <big><code>&laquo;Sách giảm giá sốc&raquo;</code></big> </div> 
+ <div id="mainContent4_3">
+
+<div id="mainContent4_3_1" style="margin-top: 4px ;">
+<table cellpadding="0px" cellspacing="20px">
+<tr>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b3.jpg">
+<img src="images/b3.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&emsp;HN 36 phố phường</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>25,000</b>
+</td>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b6.jpg">
+<img src="images/b6.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&ensp;Cha giàu cha nghèo</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>80,000</b>
+</td>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b7.jpg">
+<img src="images/b7.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&ensp;Tam quốc diễn nghĩa</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>100,000</b>
+</td>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b8.jpg">
+<img src="images/b8.jpg" height="240" width="177" class="hinh" id="img"/><br  />&nbsp;
+Quẳng gánh lo đi & sống</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>40,000</b>
+</td>
+
+</tr>
+<tr>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b1.jpg">
+<img src="images/b1.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&emsp;&emsp;Đắc nhân tâm</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>50,000</b>
+</td>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b2.jpg">
+<img src="images/b2.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&emsp;&emsp;Nhà giả kim</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>28,000</b>
+</td>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b4.jpg">
+<img src="images/b4.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&emsp;&emsp;Đi tìm lẽ sống</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>40,000</b>
+</td>
+<td valign="top">
+<a data-lightbox="gallery" href="images/b5.jpg">
+<img src="images/b5.jpg" height="240" width="177" class="hinh" id="img"/><br  />&emsp;&emsp;&ensp;Tỷ phú bán giày</a><br />&emsp;&emsp;&emsp;&ensp;<img src="images/cart2.png" /><b>50,000</b>
+</td>
+</tr>
+</table>
+</div>
+</div>
+ </div> <!-- end mainContent4--> 
+ </section> <!-- end maincontent --> 
+ <div style="clear: both;"></div>
+ </section>
+<!-- end mainContainer Page -->
+
+<!-- start Footer--> 
+<footer id="footer">
+<div id="footer1"> 
+<font size="+2"><code>&copy; 2009 &bull; All Rights Reserved <br /><a href="https://www.facebook.com/do.ductrieu" target="_blank" title="Alphatek Company" style="text-decoration:none;"> Design by Alphatek Company</a> </code></font>
+</div>
+
+</footer>
+<!-- end Footer-->         
+        
+</body>
+</html>

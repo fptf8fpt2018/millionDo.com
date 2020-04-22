@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { 
+   background-color:white ;
+   overflow-x: hidden ;
+   margin-left:2;
+   margin-top:2;
+   
+}
+
+.general {
+   font-weight:50 ; 
+   color:black ; 
+   font-family: "Times New Roman", Times, serif; 
+   font-size:medium;
+}
+
+.type1 {
+   color:red ; 
+   font-weight:200 ; 
+   font-size:50px ;
+}
+
+
+#sideBar1 {
+	 width:247.5px ;
+	 height:300px;
+	 font-size:12px ;
+	  box-shadow: 1px 1px 10px black;
+	 border-radius:20px;
+}
+
+#sideBar1_1 {	
+	line-height:3.3em ;
+	
+}
+
+#sideBar1_1_1 { 
+    height: 40px ; 
+    background-color: #900 ; 
+	color : white ; 
+	border-top-right-radius:20px ; 
+	border-top-left-radius:20px;
+	text-align:center; 
+	font-weight:900;
+	line-height:3.3em ; 
+}
+
+#sideBar1_1_2 { 
+    height: 245px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+#sideBar1_1_2 ol{
+	width:247.5px;
+	background-color:white;
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#00F;
+
+}
+#sideBar1_1_2 ol li{
+	list-style-type:none;
+}
+
+#sideBar1_1_2 ol li a {
+	color:#333;
+	display:block;
+	text-decoration:none;
+}
+#sideBar1_1_2 ol li a:hover{
+	color:white;
+}
+#sideBar1_1_2 ol li:hover{
+	background-color:#333;
+}
+
+
+
+
+::-webkit-scrollbar{
+	width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	background-color:#a6a6a6;
+	box-shadow:0 0 6px inset ;
+}
+
+::-webkit-scrollbar-track{
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	background-color:white;
+	box-shadow:0 0 6px inset ;
+}
+
+
